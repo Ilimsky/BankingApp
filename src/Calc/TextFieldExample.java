@@ -1,17 +1,16 @@
+package Calc;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
-import java.util.Locale;
 
-public class TextFields extends JFrame implements ActionListener{
+public class TextFieldExample implements ActionListener {
+
     JLabel sumLabel,periodLabel, percentLabel;
     JTextField sumTextField, periodTextField, percentTextField, paymentTextField;
     JButton paymentButton;
-    DecimalFormat df = new DecimalFormat("#.##");
 
-    TextFields(){
-
+    TextFieldExample(){
         JFrame f = new JFrame();
         sumLabel = new JLabel("Введите сумму кредита: ");
         sumLabel.setBounds(10,10,120,20);
@@ -60,9 +59,12 @@ public class TextFields extends JFrame implements ActionListener{
         String percentString = percentTextField.getText();
         int percent = Integer.parseInt(percentString);
 
-        double payment = (((percent / 1200.f * (Math.pow((1 + percent / 1200.f), period))) / (Math.pow((1 + percent / 1200.f), period) - 1)) * sum);
-        String paymentString = String.valueOf(df.format(payment));
-        paymentTextField.setText(paymentString);
+        //double payment = (((percent / 1200 * (Math.pow((1 + percent / 1200), period)))/(Math.pow((1 + percent / 1200), period) - 1)) * sum);
+        //String paymentString = String.valueOf(payment);
+        //paymentTextField.setText(paymentString);
+    }
 
+    public static void main(String[] args) {
+        new TextFieldExample();
     }
 }

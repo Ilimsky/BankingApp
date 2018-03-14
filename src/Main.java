@@ -11,7 +11,7 @@ public class Main{
 
         new TextFields();
 
-        Payment payment = new Payment();
+        /*Payment payment = new Payment();
         System.out.print("Введите сумму кредита ");
         int sum = scanner.nextInt();
         System.out.print("Введите срок кредита ");
@@ -28,6 +28,6 @@ public class Main{
 
         System.out.printf("%-4s %-30s %-15s %-14s %-15s %-15s", "№","Дата","Взнос","Проценты","Капитал","Остаток");
         System.out.println();
-        payment.payment(sum, period, percent, yearOfIssue, monthOfIssue, dayOfIssue);
+        payment.payment(sum, period, percent, yearOfIssue, monthOfIssue, dayOfIssue);*/
     }
 }
